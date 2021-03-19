@@ -325,7 +325,7 @@ class View:
 
                 plugins.on('ui_update', self)
 
-                for key, lv in state.items():
+                for key, lv in list(state.items()):
                     lv.draw(self._canvas, drawer)
 
                 if self._config['ui']['web']['dark']:
